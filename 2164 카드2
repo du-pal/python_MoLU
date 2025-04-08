@@ -1,3 +1,28 @@
+from collections import deque
+
+N = int(input())
+card = deque([])
+
+
+for i in range(N):
+    card.append(i+1)
+    
+while len(card) > 1:
+    card.popleft()
+    top_card = card.popleft()
+    card.append(top_card)
+    
+    
+    
+print(card[0])
+
+
+-> 정답!
+
+
+
+
+#%%
 N = int(input())
 
 card = []
